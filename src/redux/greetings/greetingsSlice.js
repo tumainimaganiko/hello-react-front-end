@@ -14,16 +14,16 @@ export const fetchGreetings = createAsyncThunk(
 );
 
 const greetingsSlice = createSlice({
-    name: 'greetings',
-    initialState,
-    reducers: {
+  name: 'greetings',
+  initialState,
+  reducers: {
 
-    },
-    extraReducers: (builders) => {
-      builders.addCase(fetchGreetings.fulfilled, (state, action) => {
-        state.greetings = action.payload;
-      });
-    },
-})
+  },
+  extraReducers: (builders) => {
+    builders.addCase(fetchGreetings.fulfilled, (state, action) => {
+      state.greetings = action.payload;
+    });
+  },
+});
 
 export default greetingsSlice.reducer;
